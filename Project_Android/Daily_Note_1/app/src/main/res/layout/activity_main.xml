@@ -4,36 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
+
+    <!--title-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#005090"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_option"
+
+
+            />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/icon_daily_note" />
+
+        <ImageButton
+            android:id="@+id/btnHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_calendar" />
+    </LinearLayout>
 
 
     <!--Date_Indicator-->
     <LinearLayout
-        android:background="#039489"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_height="31dp"
+        android:background="@drawable/layer_under_line"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <ImageButton
-            android:id="@+id/arrow_left"
+            android:id="@+id/btn_arrow_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_arrow_left"
-            android:background="#039489"/>
+            android:background="#ffffff"
+            android:src="@drawable/icon_arrow_left" />
+
         <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="날짜를 어떻게 넣어야되냐"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
-        <ImageButton
-            android:id="@+id/arrow_right"
+            android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_arrow_right"
-            android:background="#039489"/>
+            android:text="2018.03.08"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:src="@drawable/icon_arrow_right" />
 
     </LinearLayout>
 
@@ -41,33 +77,37 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:background="@drawable/layer_under_line"
+        android:orientation="horizontal">
 
         <android.support.design.widget.TabLayout
+
+
             android:id="@+id/tablayout"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#5c7aa4"
             android:minHeight="?attr/actionBarSize"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+            android:scaleY="-1"
+            app:tabIndicatorColor="#204773"
+            app:tabIndicatorHeight="4dp"
+            app:tabSelectedTextColor="#000000"
+            app:tabTextColor="#a7a7a7" />
     </LinearLayout>
 
+    <!--ViewPager-->
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#204773">
+        android:layout_height="wrap_content">
+
         <android.support.v4.view.ViewPager
             android:id="@+id/pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            >
+            android:layout_alignParentTop="true">
         </android.support.v4.view.ViewPager>
 
     </LinearLayout>
-
 
 
 
